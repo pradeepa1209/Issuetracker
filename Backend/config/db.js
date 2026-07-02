@@ -1,0 +1,4 @@
+const mongoose=require("mongoose");
+mongoose.connect("mongodb://127.0.0.1:27017/public_issue_db")
+.then(()=>{console.log("MongoDB Connected");})
+.catch((err)=>{console.log(err);});
