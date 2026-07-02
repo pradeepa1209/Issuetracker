@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html>
+<head><br><br>
+    <title>Report Complaint</title>
+        <link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+<center>
+   <h2>📝 Report Public Issue</h2>
+    <form id="complaintForm" method="POST" enctype="multipart/form-data">
+
+
+        <label>Issue Title:</label><br>
+        <input type="text" id="title"><br><br>
+
+        <label>Description:</label><br>
+        <textarea id="description" rows="5" cols="30"></textarea><br><br>
+
+        <label>Category:</label><br>
+        <select id="category">
+            <option>Garbage</option>
+            <option>Road</option>
+            <option>Water System</option>
+            <option>Street Light</option>
+            <option>Drainage </option>
+                        <option>others </option>
+
+        </select><br><br>
+
+        <label>Location:</label><br>
+        <input type="text" id="location"><br><br>
+
+        <label>Upload Image:</label><br>
+        <input type="file" id="image"><br><br>
+
+        <button type="submit">Submit Complaint</button>
+
+    </form>
+    <br> 
+    
+    <a href="user-dashboard.html">Go To Dashboard</a>
+
+    <script src="script.js"></script>
+</center>
+</body>
+</html>

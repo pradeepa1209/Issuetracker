@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><br><br>
+<center>
+<h2 align="center">Admin Dashboard</h2>
+
+
+<!--complaint count-->
+<div align="center">
+
+    <table cellpadding="10">
+        <tr>
+
+            <td class="card total-card">
+                <h3>📋 Total Complaints</h3>
+                <h2 id="totalCount">0</h2>
+            </td>
+
+            <td width="20"></td>
+
+            <td class="card pending-card">
+                <h3>⏳ Pending</h3>
+                <h2 id="pendingCount">0</h2>
+            </td>
+
+            <td width="20"></td>
+
+            <td class="card progress-card">
+                <h3>🔄 In Progress</h3>
+                <h2 id="progressCount">0</h2>
+            </td>
+
+            <td width="20"></td>
+
+            <td class="card resolved-card">
+                <h3>✅ Resolved</h3>
+                <h2 id="resolvedCount">0</h2>
+            </td>
+
+        </tr>
+    </table>
+
+</div>
+<br>
+<hr>
+<br>
+
+<h2 align="center">📊 Complaint Management</h2>
+
+<!--search-->
+<center>
+
+<input
+    type="text"
+    id="searchInput"
+    placeholder="🔍 Search by Issue or Category..."
+    onkeyup="searchComplaints()"
+    style="width:300px;padding:10px;font-size:16px;border-radius:8px;">
+
+</center>
+
+<br>
+
+<!--status filter-->
+<select id="statusFilter" onchange="filterComplaints()"
+style="width:500px;padding:10px;border-radius:8px;">
+
+    <option value="All">All Status</option>
+    <option value="Pending">Pending</option>
+    <option value="In Progress">In Progress</option>
+    <option value="Resolved">Resolved</option>
+
+</select>
+
+<table border="1" align="center" cellpadding="10" id="complaintTable">
+    <thead>
+        <tr>
+            <th>Issue</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Location</th>
+            <th>Image</th>
+
+            <th>Status</th>
+            <th>Action</th>
+                        <th>User Feedback</th>
+
+        </tr>
+    </thead>
+
+    <tbody id="complaintTableBody">
+
+    </tbody>
+</table><br><br>
+<button onclick="adminLogout()">Logout</button>
+
+<script src="admin-dashboard.js"></script>
+</center>
+</body>
+</html>

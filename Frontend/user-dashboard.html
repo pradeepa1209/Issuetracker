@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<br><br>
+<body><center>
+    <h2 align="center">New Complaint</h2>
+
+<div style="text-align:center; margin-bottom:20px;">
+
+    <button onclick="location.href='complaint.html'">
+        📝 Report New Issue
+    </button>
+
+    &nbsp;&nbsp;&nbsp;
+
+    <button onclick="location.href='feedback.html'">
+        🌍 Community Feedback
+    </button>
+
+</div>
+
+<hr>
+<br>
+<h2 align="center">📋 My Complaints</h2>
+
+
+
+<table border="1" align="center" cellpadding="10">
+
+    <thead>
+
+        <tr>
+            <th>Issue</th>
+            <th>Category</th>
+            <th>Description</th>
+            
+            <th>Location</th>
+            <th>Image</th>
+            <th>Status</th>
+            <th>Feedback</th>
+        </tr>
+
+    </thead>
+
+    <tbody id="userComplaintBody">
+
+    </tbody>
+
+</table><br><br>
+
+<button onclick="logout()">Logout</button>
+
+
+<script src="user-dashboard.js"></script>
+</center>
+
+</body>
+
+</html>
+
+
+
