@@ -16,7 +16,64 @@ cb(null, Date.now() + "-" + file.originalname);
 
 const upload = multer({ storage: storage });
 
-// Add Complaint
+//Add Complaint
+
+router.post("/add", upload.single("image"), async (req, res) => {
+
+    try {
+
+        // Intelligent Priority Prediction
+        let priority = "Low";
+
+        if (
+            req.body.areaType === "School Area" ||
+            req.body.areaType === "Hospital Area" ||
+            req.body.areaType === "Highway" ||
+            req.body.areaType === "Bus Stand"
+        ) {
+            priority = "High";
+        }
+        else if (
+            req.body.areaType === "Market Area" ||
+            req.body.areaType === "Public Place"
+        ) {
+            priority = "Medium";
+        }
+
+        const complaint = new Complaint({
+            title: req.body.title,
+            description: req.body.description,
+            category: req.body.category,
+            location: req.body.location,
+            areaType: req.body.areaType,
+            priority: priority,
+            email: req.body.email,
+            image: req.file ? req.file.filename : "",
+            status: "Pending"
+        });
+
+        await complaint.save();
+
+        res.json({
+            success: true,
+            message: "Complaint Submitted Successfully"
+        });
+
+    } catch (error) {
+
+        console.log(error);
+
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+
+    }
+
+});
+
+
+/*/ Add Complaint
 router.post("/add", upload.single("image"), async (req, res) => {
 
 
@@ -51,7 +108,7 @@ try {
 }
 
 
-});
+});*/
 
 // Get All Complaints
 router.get("/all", async (req, res) => {
