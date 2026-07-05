@@ -5,6 +5,14 @@ const complaintSchema = new mongoose.Schema({
     description: String,
     category: String,
     location: String,
+    areaType: {
+    type: String
+},
+
+priority: {
+    type: String,
+    default: "Low"
+},
     image: String,
 
     email:String,
