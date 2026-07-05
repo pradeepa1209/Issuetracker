@@ -207,7 +207,9 @@ complaintForm.addEventListener("submit", async function(event){
     if (
 document.getElementById("title").value.trim() === "" ||
 document.getElementById("description").value.trim() === "" ||
-document.getElementById("location").value.trim() === ""
+document.getElementById("location").value.trim() === "" ||
+        document.getElementById("areaType").value === ""
+
 ) {
 alert("Please fill all complaint details.");
 return;
@@ -219,6 +221,8 @@ return;
     formData.append("description", document.getElementById("description").value);
     formData.append("category", document.getElementById("category").value);
     formData.append("location", document.getElementById("location").value);
+    formData.append("areaType", document.getElementById("areaType").value);
+
     formData.append("email", localStorage.getItem("userEmail"));
 
     const image = document.getElementById("image").files[0];
