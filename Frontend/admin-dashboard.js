@@ -38,6 +38,15 @@ complaints.filter(c => c.status === "Resolved").length;
                     <td>${complaint.category}</td>
                     <td>${complaint.description}</td>
                   <td>${complaint.location}</td>
+                  <td>
+${
+    complaint.priority === "High"
+    ? "<span style='color:red;font-weight:bold;'>🔴 High</span>"
+    : complaint.priority === "Medium"
+    ? "<span style='color:orange;font-weight:bold;'>🟡 Medium</span>"
+    : "<span style='color:green;font-weight:bold;'>🟢 Low</span>"
+}
+</td>
 <td>
     ${
         complaint.image
@@ -156,6 +165,17 @@ function searchComplaints() {
 
             <td>${complaint.description}</td>
              <td>${complaint.location}</td>
+             <td>${complaint.areaType}</td>
+
+<td>
+${
+    complaint.priority === "High"
+    ? "<span style='color:red;font-weight:bold;'>🔴 High</span>"
+    : complaint.priority === "Medium"
+    ? "<span style='color:orange;font-weight:bold;'>🟡 Medium</span>"
+    : "<span style='color:green;font-weight:bold;'>🟢 Low</span>"
+}
+</td>
 
             <td>
                 ${
@@ -227,7 +247,17 @@ function filterComplaints() {
 
             <td>${complaint.description}</td>
             <td>${complaint.location}</td>
+                <td>${complaint.areaType}</td>
 
+<td>
+${
+    complaint.priority === "High"
+    ? "<span style='color:red;font-weight:bold;'>🔴 High</span>"
+    : complaint.priority === "Medium"
+    ? "<span style='color:orange;font-weight:bold;'>🟡 Medium</span>"
+    : "<span style='color:green;font-weight:bold;'>🟢 Low</span>"
+}
+</td>
             <td>
             ${
                 complaint.image
