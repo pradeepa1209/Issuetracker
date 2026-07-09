@@ -1,30 +1,34 @@
-# 🏛️ Smart Public Issue Tracking and Reporting System
+# 🤖 Smart Public Issue Tracking and Reporting System (SPITARS)
 
-A web-based application developed to help citizens report public issues such as garbage, water leakage, street light failures, and road damages. The system enables users to submit complaints with images, track complaint status, and provide feedback after resolution. Administrators can efficiently manage complaints through a dedicated dashboard.
+## 📌 Project Overview
+
+The Smart Public Issue Tracking and Reporting System (SPITARS) is a web-based complaint management system that enables citizens to report public issues online. Users can register, submit complaints with images, track complaint status, and provide feedback after resolution. The system also includes an AI-powered chatbot using Google Gemini API to assist users.
+
+---
+
+## 🎯 Objectives
+
+- Enable citizens to report public issues online.
+- Reduce manual complaint handling.
+- Provide real-time complaint status tracking.
+- Allow administrators to manage complaints efficiently.
+- Improve user experience with an AI Assistant.
+- Prioritize complaints intelligently based on area type.
 
 ---
 
 ## ✨ Features
 
-### 👤 User
-- User Registration
-- User Login
-- Submit Public Complaints
-- Upload Complaint Images
-- Track Complaint Status
-- View Complaint History
-- Give Feedback after Resolution
-- Community Feedback Page
-- Logout
-
-### 👨‍💼 Admin
-- Secure Admin Login
-- View All Complaints
-- Search Complaints
-- Filter Complaints by Status
-- Update Complaint Status
-- View User Feedback
-- Complaint Statistics Dashboard
+- 👤 User Registration & Login
+- 🔐 Admin Login
+- 📝 Complaint Submission
+- 📷 Image Upload
+- 📍 Location-Based Complaint Reporting
+- 🏫 Area Type Selection
+- ⚡ Intelligent Priority Prediction
+- 📊 Complaint Status Tracking
+- 💬 Community Feedback
+- 🤖 AI Chatbot using Google Gemini API
 
 ---
 
@@ -42,17 +46,21 @@ A web-based application developed to help citizens report public issues such as 
 ### Database
 - MongoDB
 
+### AI Technology
+- Google Gemini API (Generative AI)
+
 ### Other Tools
-- Multer (Image Upload)
 - VS Code
 - GitHub
+- MongoDB Compass
+- Postman (for API testing)
 
 ---
 
 ## 📂 Project Structure
 
 ```
-Smart-Public-Issue-Tracking-System
+SPITARS
 │
 ├── frontend
 │   ├── index.html
@@ -62,93 +70,120 @@ Smart-Public-Issue-Tracking-System
 │   ├── complaint.html
 │   ├── user-dashboard.html
 │   ├── admin-dashboard.html
-│   ├── community-feedback.html
+│   ├── chatbot.html
 │   ├── style.css
-│   └── JavaScript Files
+│   ├── chatbot.css
+│   ├── script.js
+│   └── chatbot.js
 │
 ├── backend
 │   ├── config
-│   ├── controllers
 │   ├── models
 │   ├── routes
 │   ├── uploads
-│   ├── server.js
+│   ├── .env
 │   ├── package.json
-│   └── package-lock.json
+│   └── server.js
 ```
 
 ---
 
-## 🚀 Installation
+## ⚙️ Installation
 
-### Clone the Repository
+### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/your-repository-name.git
+git clone https://github.com/YOUR_GITHUB_USERNAME/SPITARS.git
 ```
 
-### Install Dependencies
+### Install Backend Packages
 
 ```bash
 cd backend
 npm install
 ```
 
-### Start the Server
+### Create .env File
+
+```
+GEMINI_API_KEY=YOUR_API_KEY
+PORT=5000
+```
+
+### Run Backend
 
 ```bash
 node server.js
 ```
 
-Server runs on:
+### Open Frontend
 
-```
-http://localhost:5000
-```
+Open `index.html` using Live Server or your browser.
 
 ---
 
-## 📸 Modules
+## 🤖 AI Chatbot
+
+The AI chatbot is powered by **Google Gemini API**.
+
+### Capabilities
+
+- Answers user questions.
+- Guides users in complaint registration.
+- Explains project features.
+- Provides information about complaint tracking.
+- Helps users understand Intelligent Priority Prediction.
+
+---
+
+## 📊 Intelligent Priority Prediction
+
+The system assigns complaint priority based on the selected area type.
+
+| Area Type | Priority |
+|-----------|----------|
+| School Area | 🔴 High |
+| Hospital Area | 🔴 High |
+| Public Place | 🟡 Medium |
+| Residential Area | 🟢 Low |
+
+---
+
+## 📸 Screenshots
+
+Add screenshots of:
 
 - Home Page
 - User Registration
 - User Login
-- Admin Login
-- Complaint Submission
-- Image Upload
+- Complaint Form
 - User Dashboard
 - Admin Dashboard
-- Complaint Search
-- Complaint Filter
+- AI Chatbot
 - Community Feedback
-- Complaint Status Tracking
 
 ---
 
-## 🎯 Future Enhancements
+## 🚀 Future Enhancements
 
-- Email Notifications
-- SMS Alerts
-- Live Complaint Tracking
-- Interactive Map Integration
+- Duplicate Complaint Detection
+- GPS Location Tracking
+- Email & SMS Notifications
 - Mobile Application
-- AI-based Complaint Categorization
+- Government Portal Integration
 
 ---
 
-## 👩‍💻 Developed By
+## 👨‍💻 Developed By
 
 **Pradeepa B**
-**922525243156**
 
-Bachelor of Technology (B.Tech)
+B.Tech Artificial Intelligence and Data Science
 
-Department of  Artificial Intelligence and Data Science
-
-Academic Mini Project – 2026
+VSB Engineering College, Karur
 
 ---
 
-## 📜 License
+## 📄 License
 
-This project is developed for educational and academic purposes.
+This project is developed for academic purposes.
