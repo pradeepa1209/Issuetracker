@@ -451,3 +451,40 @@ img{
 
     background:#27ae60;
 }
+/* chatbot */
+
+#chatbotButton{
+
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#2563eb;
+color:white;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+z-index:9999;
+
+}
+
+#chatWindow{
+
+position:fixed;
+bottom:90px;
+right:20px;
+width:360px;
+height:500px;
+background:white;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+display:none;
+flex-direction:column;
+z-index:9999;
+
+}
