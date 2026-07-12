@@ -151,15 +151,20 @@ The system assigns complaint priority based on the selected area type.
 
 ## 📸 Screenshots
 
-Add screenshots of:
-
 - Home Page
+  
 - User Registration
+  
 - User Login
+  
 - Complaint Form
+  
 - User Dashboard
+  
 - Admin Dashboard
+  
 - AI Chatbot
+  
 - Community Feedback
 
 ---
